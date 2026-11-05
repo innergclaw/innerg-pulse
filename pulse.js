@@ -131,7 +131,121 @@ function setBusy(form, busy) {
   for (const control of form.querySelectorAll("button, input")) control.disabled = busy;
 }
 
+export function bootWisdom(doc = document) {
+  const root = doc.querySelector(".wisdom");
+  const track = root?.querySelector(".wisdom-track");
+  if (!root || !track) return;
+  const slides = [...track.querySelectorAll(".wisdom-slide")];
+  const prev = root.querySelector(".wisdom-prev");
+  const next = root.querySelector(".wisdom-next");
+  const dots = [...root.querySelectorAll(".wisdom-dot")];
+  const count = root.querySelector(".wisdom-count");
+  if (!slides.length) return;
+  const view = doc.defaultView;
+  const reduce = Boolean(view?.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches);
+  let index = 0;
+  let programmatic = false;
+  let settleTimer = 0;
+
+  const clamp = (n) => Math.max(0, Math.min(slides.length - 1, n));
+
+  const paint = (i) => {
+    index = clamp(i);
+    slides.forEach((slide, n) => {
+      const on = n === index;
+      if (on) {
+        slide.removeAttribute("aria-hidden");
+        slide.removeAttribute("inert");
+      } else {
+        slide.setAttribute("aria-hidden", "true");
+        slide.setAttribute("inert", "");
+      }
+    });
+    dots.forEach((dot, n) => {
+      dot.setAttribute("aria-current", n === index ? "true" : "false");
+    });
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index === slides.length - 1;
+    if (count) count.textContent = `${index + 1} of ${slides.length}`;
+  };
+
+  const leftFor = (slide) => {
+    const delta = slide.getBoundingClientRect().left - track.getBoundingClientRect().left;
+    return track.scrollLeft + delta;
+  };
+
+  const go = (i) => {
+    const nextIndex = clamp(i);
+    const slide = slides[nextIndex];
+    if (!slide) return;
+    const left = leftFor(slide);
+    paint(nextIndex);
+    const active = doc.activeElement;
+    if (active && root.contains(active) && active.disabled) track.focus();
+    if (Math.abs(track.scrollLeft - left) < 2) return;
+    programmatic = true;
+    track.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
+  };
+
+  const read = () => {
+    const width = slides[0].offsetWidth || 1;
+    const i = clamp(Math.round(track.scrollLeft / width));
+    if (i !== index) paint(i);
+  };
+
+  const settle = () => {
+    programmatic = false;
+    read();
+  };
+
+  prev?.addEventListener("click", () => go(index - 1));
+  next?.addEventListener("click", () => go(index + 1));
+  dots.forEach((dot, n) => {
+    dot.addEventListener("click", () => {
+      go(n);
+      dots[n]?.focus();
+    });
+  });
+
+  root.addEventListener("keydown", (event) => {
+    const fromDot = event.target?.classList?.contains("wisdom-dot");
+    if (event.key === "ArrowRight") go(index + 1);
+    else if (event.key === "ArrowLeft") go(index - 1);
+    else if (event.key === "Home") go(0);
+    else if (event.key === "End") go(slides.length - 1);
+    else return;
+    event.preventDefault();
+    if (fromDot) dots[index]?.focus();
+  });
+
+  track.addEventListener("scroll", () => {
+    if (programmatic) {
+      view?.clearTimeout(settleTimer);
+      settleTimer = view?.setTimeout(settle, 160) || 0;
+      return;
+    }
+    read();
+  }, { passive: true });
+  track.addEventListener("scrollend", settle);
+
+  let resizeTimer = 0;
+  view?.addEventListener("resize", () => {
+    view.clearTimeout(resizeTimer);
+    resizeTimer = view.setTimeout(() => {
+      const slide = slides[index];
+      if (!slide) return;
+      const left = leftFor(slide);
+      if (Math.abs(track.scrollLeft - left) < 2) return;
+      programmatic = true;
+      track.scrollTo({ left, behavior: "auto" });
+    }, 80);
+  });
+
+  paint(0);
+}
+
 export function boot(doc = document) {
+  bootWisdom(doc);
   const page = doc.body?.dataset?.pulsePage;
   const status = doc.getElementById("panel-status");
   if (page === "signup") {
