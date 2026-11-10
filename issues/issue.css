@@ -1,0 +1,33 @@
+/* INNERG PULSE issue pages ~ horizon Style A, cream article sheet */
+body.issue-page{background:var(--cream);color:var(--ink);overflow-x:hidden}
+body.issue-page .hz-top{position:relative;background:var(--cream);color:var(--ink);border-bottom:1px solid #D9CDB8;padding:18px 28px}
+body.issue-page .brand{color:var(--ink)}
+body.issue-page .brand span{color:var(--red)}
+body.issue-page .brand a{color:inherit;text-decoration:none}
+body.issue-page .seal{text-decoration:none}
+body.issue-page .seal img{box-shadow:0 0 0 2px var(--ink)}
+
+.issue{max-width:720px;margin:0 auto;padding:48px 28px 88px}
+.issue-kicker{margin:0 0 14px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--sky)}
+.issue-date{display:block;margin-top:6px;letter-spacing:2px;color:var(--muted);font-weight:400;text-transform:none}
+.issue-cover{margin:0 0 36px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);background:var(--ink)}
+.issue-cover img{display:block;width:100%;height:auto}
+.issue h1{margin:0 0 28px;font-weight:900;font-size:clamp(32px,5.4vw,48px);line-height:1.15;letter-spacing:-.02em}
+.issue .lede,.issue p{margin:0 0 22px;font-size:clamp(18px,2vw,20px);line-height:1.7}
+.issue ul{list-style:none;margin:8px 0 32px;padding:0}
+.issue li{position:relative;padding:10px 0 10px 1.2em;font-size:clamp(18px,2vw,20px);line-height:1.65}
+.issue li::before{content:"–";position:absolute;left:0;color:var(--red)}
+.issue .cta{display:inline-block;margin:8px 0 36px;font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:var(--cream);border:2px solid var(--ink);padding:14px 22px;text-decoration:none}
+.issue .cta:hover{background:var(--ink);color:var(--cream)}
+.issue .signoff{margin:8px 0 0;font-size:18px;line-height:1.7}
+.issue .signoff cite{display:block;margin-top:10px;font-style:normal;font-family:var(--serif)}
+.issue .back{margin:40px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:1px}
+.issue .back a{color:var(--sky);text-decoration:none}
+.issue .back a:hover{text-decoration:underline}
+
+@media (max-width:760px){
+  body.issue-page .hz-top{padding:14px 16px}
+  .issue{padding:32px 18px 72px}
+  .issue-cover{box-shadow:6px 6px 0 var(--ink)}
+  .issue h1{margin-bottom:22px}
+}
