@@ -1,17 +1,8 @@
 function arrowIcon() {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox", "0 0 16 16");
-  svg.setAttribute("width", "14");
-  svg.setAttribute("height", "14");
-  svg.setAttribute("aria-hidden", "true");
-  svg.setAttribute("class", "arrow");
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", "M1 8h13M9 3.5 14 8 9 12.5");
-  path.setAttribute("fill", "none");
-  path.setAttribute("stroke", "currentColor");
-  path.setAttribute("stroke-width", "1.5");
-  svg.append(path);
-  return svg;
+  const span = document.createElement("span");
+  span.className = "arrow";
+  span.setAttribute("aria-hidden", "true");
+  return span;
 }
 
 const REGIONS = [
