@@ -9,10 +9,12 @@ a{color:inherit}
 .skip-link:focus{left:8px}
 .grain{position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.16;mix-blend-mode:multiply;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.hz-top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:22px 28px}
+.hz-top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;padding:22px 28px}
+.hz-top .labor-link{color:var(--cream)}
 .seal img{display:block;width:72px;height:72px;border-radius:50%;box-shadow:0 0 0 3px var(--cream)}
 .brand{margin:0;font-family:var(--mono);font-weight:700;letter-spacing:4px;font-size:14px;color:var(--cream)}
 .brand span{color:#F6B9A6}
+.labor-link{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
 .hero{position:relative;background:radial-gradient(120% 80% at 50% 100%,var(--sky2) 0%,var(--sky) 55%,#18309A 100%);color:var(--cream);text-align:center;padding:130px 20px 0;overflow:hidden}
 .kicker{margin:0 0 14px;font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--cream);opacity:.9}
 .kicker.ink{color:var(--red);opacity:1}
@@ -85,7 +87,8 @@ button.quiet{background:none;color:var(--ink);border:0;padding:8px 0;text-decora
 .hz-foot .muted{color:#B8AC98;font-size:12px;margin-top:10px}
 .noscript{text-align:center;padding:12px}
 @media (max-width:760px){
-  .hz-top{padding:14px 16px}.seal img{width:54px;height:54px}.brand{font-size:12px;letter-spacing:3px}
+  .hz-top{padding:14px 16px;gap:8px}.seal img{width:54px;height:54px}.brand{font-size:12px;letter-spacing:2px}
+  .labor-link{font-size:11px;letter-spacing:1px}
   .hero{padding-top:104px}
   .foot-seal{width:80px;height:80px;margin-bottom:14px}
   .ground{height:320px;margin-top:18px}
