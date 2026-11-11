@@ -159,7 +159,7 @@ function render(data) {
     })));
   }
 
-  const input = el("input", { id: "pulse-search", type: "search", placeholder: "Search a company, like Walmart or Boeing", value: state.query });
+  const input = el("input", { id: "pulse-search", type: "search", placeholder: "Search a company", value: state.query });
   input.addEventListener("input", () => { state.query = input.value; state.shown = 40; render(data); });
   const search = el("label", { class: "search" }, [
     text("span", "Search a company", { class: "sr" }),
