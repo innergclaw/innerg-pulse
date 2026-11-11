@@ -2,6 +2,7 @@ function arrowIcon() {
   const span = document.createElement("span");
   span.className = "arrow";
   span.setAttribute("aria-hidden", "true");
+  span.textContent = "➜\uFE0E";
   return span;
 }
 
