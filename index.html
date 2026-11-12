@@ -2,143 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#1F3FBF" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F3EBDD" />
   <meta name="description" content="INNERG PULSE is free market news, 3 times a day on weekdays. Simple and clear. Join with your email." />
   <title>INNERG PULSE ~ Free market news, simple and clear</title>
   <meta property="og:title" content="INNERG PULSE ~ Free market news, simple and clear" />
   <meta property="og:description" content="Free market news, 3 times a day on weekdays. Simple and clear." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://nasirr.innergintel.study/pulse/assets/wisdom/wisdom-003.jpg" />
+  <meta property="og:image" content="https://pulse.innergintel.study/assets/wisdom/wisdom-003.jpg" />
   <meta property="og:url" content="https://pulse.innergintel.study/" />
   <link rel="canonical" href="https://pulse.innergintel.study/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="pulse-horizon.css?v=h-6" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,0..100&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="pulse-a.css?v=a-1" />
   <script type="module" src="pulse.js?v=pulse-12"></script>
+  <script defer src="pulse-a.js?v=a-1"></script>
 </head>
 <body data-pulse-page="signup">
   <script src="pulse-splash.js?v=s-1"></script>
   <a class="skip-link" href="#signup-panel">Skip to sign up</a>
+
+  <!-- print texture + rough-edge filter -->
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4" /><feDisplacementMap in="SourceGraphic" scale="7" /></filter>
+    <filter id="rough-sm"><feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="2" seed="9" /><feDisplacementMap in="SourceGraphic" scale="3" /></filter>
+  </svg>
   <div class="grain" aria-hidden="true"></div>
 
-  <header class="hz-top">
-    <a class="seal" href="https://nasirr.innergintel.study/"><img src="assets/seal-320.jpg" width="72" height="72" alt="InnerG Intel seal" /></a>
-    <p class="brand">INNERG <span>PULSE</span></p>
-    <a class="labor-link" href="/labor/">Labor brief</a>
-  </header>
+  <div class="stage">
+    <svg class="burst" id="burst" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
 
-  <main id="signup">
-    <section class="hero" aria-labelledby="page-title">
-      <p class="kicker">Free market news</p>
-      <h1 id="page-title">The market,<br />made simple.</h1>
-      <p class="hero-sub">INNERG PULSE is free market news, 3 times a day. Simple and clear, so anyone can follow it.</p>
-      <svg class="ground" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
-        <defs>
-          <radialGradient id="soil" cx="50%" cy="0%" r="90%">
-            <stop offset="0" stop-color="#C9573A" />
-            <stop offset=".45" stop-color="#9E2B25" />
-            <stop offset="1" stop-color="#5A1A16" />
-          </radialGradient>
-          <filter id="paint"><feTurbulence type="fractalNoise" baseFrequency=".012 .05" numOctaves="3" seed="7" /><feDisplacementMap in="SourceGraphic" scale="14" /></filter>
-        </defs>
-        <path d="M-40 120 Q720 -40 1480 120 L1480 560 L-40 560 Z" fill="url(#soil)" filter="url(#paint)" />
-        <g fill="none" stroke="#F3EBDD" stroke-opacity=".55" filter="url(#paint)">
-          <ellipse cx="720" cy="300" rx="120" ry="34" stroke-width="3" />
-          <ellipse cx="720" cy="300" rx="230" ry="66" stroke-width="2.6" stroke-opacity=".45" />
-          <ellipse cx="720" cy="300" rx="360" ry="104" stroke-width="2.2" stroke-opacity=".35" />
-          <ellipse cx="720" cy="300" rx="520" ry="150" stroke-width="1.8" stroke-opacity=".25" />
-          <ellipse cx="720" cy="300" rx="700" ry="202" stroke-width="1.4" stroke-opacity=".18" />
-        </g>
-        <g fill="#1E1414" transform="translate(712 248)">
-          <circle cx="8" cy="5" r="5" />
-          <path d="M3 12 h10 l2 22 h-4 l-1 22 h-4 l-1-22 h-4 Z" />
-        </g>
-        <ellipse cx="720" cy="306" rx="16" ry="4" fill="#1E1414" opacity=".35" />
-      </svg>
-    </section>
+    <header class="top">
+      <a class="seal" href="https://nasirr.innergintel.study/" aria-label="InnerG Intel home">
+        <span class="ring" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
+        <img src="assets/seal-320.jpg" width="64" height="64" alt="InnerG Intel seal" />
+      </a>
+      <p class="brand">INNERG <b>PULSE</b></p>
+      <a class="labor-link" href="/labor/">Labor brief</a>
+    </header>
 
-    <section class="panel" id="signup-panel" aria-labelledby="panel-title">
-      <h2 id="panel-title">Get the updates</h2>
-      <p id="panel-status" class="panel-status" role="status" aria-live="polite"></p>
-      <form id="email-form">
-        <fieldset class="list-pick">
-          <legend>Pick your lists</legend>
-          <label class="pick pick-all"><input type="checkbox" id="list-all" /><span><strong>SELECT ALL</strong><small>Check or clear every list at once</small></span></label>
-          <label class="pick"><input type="checkbox" name="list_pulse" id="list-pulse" checked /><span><strong>INNERG PULSE</strong><small>Market news, 3 times a day on weekdays</small></span></label>
-          <label class="pick"><input type="checkbox" name="list_tech" id="list-tech" /><span><strong>INNERG TECH</strong><small>Optional ~ one daily tech and security digest</small></span></label>
-          <label class="pick"><input type="checkbox" name="list_wisdom" id="list-wisdom" /><span><strong>INNERG WISDOM</strong><small data-list-desc="wisdom">Short money and mindset cards, twice a week</small></span></label>
-          <label class="pick"><input type="checkbox" name="list_oyw" id="list-oyw" /><span><strong>OWNYOURWEB TIPS</strong><small data-list-desc="oyw">Own your website ~ simple tips for business owners, every week</small></span></label>
-        </fieldset>
-        <label for="email">Email</label>
-        <div class="row">
-          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com" />
-          <button type="submit">Send my code</button>
+    <main id="signup" class="hero">
+      <section class="pitch" aria-labelledby="page-title">
+        <p class="kicker">Free market news <i>~</i> weekdays</p>
+        <h1 id="page-title"><span class="w">The</span> <span class="w">market,</span><br /><span class="w">made</span> <span class="w red">simple.</span></h1>
+        <p class="sub">Three short notes a day. Plain words. No hype.</p>
+
+        <div class="beats" aria-label="When it lands">
+          <svg class="pulse-line" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 34 H120 L138 34 L150 12 L164 52 L178 22 L190 34 H300 L318 34 L330 6 L344 56 L358 18 L370 34 H480 L498 34 L510 14 L524 50 L538 26 L550 34 H600" />
+          </svg>
+          <ol>
+            <li><b>01</b> Before the open</li>
+            <li><b>02</b> Midday</li>
+            <li><b>03</b> After the close</li>
+          </ol>
         </div>
-        <div class="hp" aria-hidden="true"><label for="pulse-hp">Leave this empty</label><input id="pulse-hp" name="pulse_hp" type="text" tabindex="-1" autocomplete="off" /></div>
-      </form>
-      <form id="code-form" hidden>
-        <p id="sent-to" class="sent-to"></p>
-        <label for="code">One-time code</label>
-        <div class="row">
-          <input id="code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" minlength="8" maxlength="8" pattern="[0-9]{8}" required placeholder="00000000" />
-          <button type="submit">Confirm code</button>
-        </div>
-        <div class="actions"><button id="resend-code" class="quiet" type="button">Send a new code</button><button id="change-email" class="quiet" type="button">Use a different email</button></div>
-      </form>
-      <div id="done-panel" hidden>
-        <p class="done-note">You can leave a list from the unsubscribe link in any issue.</p>
-        <p class="actions"><a href="https://nasirr.innergintel.study/watchlist/">Open the public Market Pulse desk</a></p>
-      </div>
-      <p class="privacy">Free. Your email is only used for the lists you pick. Leave anytime.</p>
-    </section>
+      </section>
 
-    <section class="gets" aria-labelledby="gets-title">
-      <div class="gets-copy">
-        <p class="kicker ink">What you get</p>
-        <h2 id="gets-title">Three short notes. <span>One clear picture.</span></h2>
-        <ol>
-          <li><strong>Before the open</strong> What to know before the market starts.</li>
-          <li><strong>Midday</strong> What moved, and why, in plain words.</li>
-          <li><strong>After the close</strong> The day in 3 key moves, plus what to watch.</li>
-        </ol>
-      </div>
-      <figure class="wisdom" aria-roledescription="carousel" aria-label="WISDOM of the day">
-        <div class="wisdom-stage">
-          <div class="wisdom-track" tabindex="0" aria-label="WISDOM cards">
-            <div class="wisdom-slide" id="wisdom-1" role="group" aria-roledescription="slide" aria-label="1 of 3">
-              <img src="assets/wisdom/wisdom-001.jpg" width="864" height="1080" alt="WISDOM of the day card: investing day-cost idea. What is holding you back from investing, with yearly amounts as a daily cost from $5,000 a year ($13.70 a day) to $50,000 a year ($136.99 a day)." draggable="false" />
-            </div>
-            <div class="wisdom-slide" id="wisdom-2" role="group" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true" inert>
-              <img src="assets/wisdom/wisdom-002.jpg" width="864" height="1080" loading="lazy" alt="WISDOM of the day card: 6 cybersecurity stocks and ETFs worth considering" draggable="false" />
-            </div>
-            <div class="wisdom-slide" id="wisdom-3" role="group" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true" inert>
-              <img src="assets/wisdom/wisdom-003.jpg" width="864" height="1080" loading="lazy" alt="WISDOM of the day card: Half of America owns just 1% of the stock market (US household stock ownership by wealth)" draggable="false" />
-            </div>
+      <section class="card" id="signup-panel" aria-labelledby="panel-title">
+        <span class="stamp" aria-hidden="true">FREE</span>
+        <h2 id="panel-title">Get the updates</h2>
+        <p id="panel-status" class="panel-status" role="status" aria-live="polite"></p>
+
+        <form id="email-form">
+          <label for="email" class="lbl">Your email</label>
+          <div class="row">
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com" />
+            <button type="submit" class="go"><span>Send my code</span></button>
           </div>
-        </div>
-        <div class="wisdom-controls">
-          <button type="button" class="wisdom-btn wisdom-prev" aria-label="Previous WISDOM card" disabled>Prev</button>
-          <p class="wisdom-count" aria-live="polite" aria-atomic="true">1 of 3</p>
-          <button type="button" class="wisdom-btn wisdom-next" aria-label="Next WISDOM card">Next</button>
-          <div class="wisdom-dots" role="group" aria-label="Choose a WISDOM card">
-            <button type="button" class="wisdom-dot" aria-label="Show card 1 of 3" aria-current="true"></button>
-            <button type="button" class="wisdom-dot" aria-label="Show card 2 of 3" aria-current="false"></button>
-            <button type="button" class="wisdom-dot" aria-label="Show card 3 of 3" aria-current="false"></button>
-          </div>
-        </div>
-        <figcaption><span>WISDOM of the day</span> Every issue ends with one simple money idea.</figcaption>
-      </figure>
-    </section>
-  </main>
 
-  <footer class="hz-foot">
-    <img class="foot-seal" src="assets/seal-320.jpg" width="96" height="96" alt="INNERG INTEL official seal" loading="lazy" />
-    <p class="foot-brand">INNERG <span>PULSE</span></p>
-    <p><a class="labor-link" href="/labor/">Labor brief</a></p>
-    <p><a href="https://www.youtube.com/@innergintel">YouTube ~ InnerG Intel @innergintel</a></p>
-    <p class="tag">#ROADTO1000</p>
+          <fieldset class="list-pick">
+            <legend class="lbl">Lists <label class="all"><input type="checkbox" id="list-all" /> <span>Select all</span></label></legend>
+            <div class="chips">
+              <label class="chip" title="Market news, 3 times a day on weekdays"><input type="checkbox" name="list_pulse" id="list-pulse" checked /><span>PULSE <small>3x daily</small></span></label>
+              <label class="chip" title="One daily tech and security digest"><input type="checkbox" name="list_tech" id="list-tech" /><span>TECH <small>daily</small></span></label>
+              <label class="chip" title="Short money and mindset cards, twice a week"><input type="checkbox" name="list_wisdom" id="list-wisdom" /><span>WISDOM <small>2x week</small></span></label>
+              <label class="chip" title="Simple website tips for business owners, every week"><input type="checkbox" name="list_oyw" id="list-oyw" /><span>OWNYOURWEB <small>weekly</small></span></label>
+            </div>
+          </fieldset>
+
+          <div class="hp" aria-hidden="true"><label for="pulse-hp">Leave this empty</label><input id="pulse-hp" name="pulse_hp" type="text" tabindex="-1" autocomplete="off" /></div>
+        </form>
+
+        <form id="code-form" hidden>
+          <p id="sent-to" class="sent-to"></p>
+          <label for="code" class="lbl">One-time code</label>
+          <div class="row">
+            <input id="code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" minlength="8" maxlength="8" pattern="[0-9]{8}" required placeholder="00000000" />
+            <button type="submit" class="go"><span>Confirm</span></button>
+          </div>
+          <div class="actions"><button id="resend-code" class="quiet" type="button">Send a new code</button><button id="change-email" class="quiet" type="button">Use a different email</button></div>
+        </form>
+
+        <div id="done-panel" hidden>
+          <p class="done-note">Leave any list from the link in any issue.</p>
+          <p class="actions"><a href="https://nasirr.innergintel.study/watchlist/">Open the Market Pulse desk</a></p>
+        </div>
+
+        <p class="privacy">Free. Only the lists you pick. Leave anytime.</p>
+      </section>
+    </main>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>▶ SUBSCRIBE TO INNERG PULSE • FREE MARKET NEWS • 3 NOTES A DAY • PLAIN WORDS • </span><span>▶ SUBSCRIBE TO INNERG PULSE • FREE MARKET NEWS • 3 NOTES A DAY • PLAIN WORDS • </span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p class="no">No. 001 • INNERG INTEL • 2026</p>
+    <p class="links"><a class="labor-link" href="/labor/">Labor brief</a><a href="https://www.youtube.com/@innergintel">YouTube @innergintel</a><span class="tag">#ROADTO1000</span></p>
   </footer>
   <noscript><p class="noscript">JavaScript is required to confirm your email.</p></noscript>
 </body>
