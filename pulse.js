@@ -44,7 +44,7 @@ export function tokenFromSearch(search) {
 
 export function listFromSearch(search) {
   const list = new URLSearchParams(search).get("list") || "";
-  return ["pulse", "tech", "wisdom", "ownyourweb"].includes(list) ? list : "all";
+  return ["pulse", "tech", "wisdom", "ownyourweb", "labor"].includes(list) ? list : "all";
 }
 
 // Schedules for the two new lists live here (pending confirmation). Edit these strings only.
@@ -58,7 +58,8 @@ export function listsFromForm(form) {
   const tech = Boolean(form?.querySelector("[name=list_tech]")?.checked);
   const wisdom = Boolean(form?.querySelector("[name=list_wisdom]")?.checked);
   const ownyourweb = Boolean(form?.querySelector("[name=list_oyw]")?.checked);
-  return { pulse, tech, wisdom, ownyourweb };
+  const labor = Boolean(form?.querySelector("[name=list_labor]")?.checked);
+  return { pulse, tech, wisdom, ownyourweb, labor };
 }
 
 
@@ -255,7 +256,7 @@ export function boot(doc = document) {
     const codeInput = doc.getElementById("code");
     const sentTo = doc.getElementById("sent-to");
     let pendingEmail = "";
-    let pendingLists = { pulse: true, tech: false, wisdom: false, ownyourweb: false };
+    let pendingLists = { pulse: true, tech: false, wisdom: false, ownyourweb: false, labor: false };
     wireSelectAll(emailForm, doc);
 
     const subscribe = async (email) => {
@@ -328,7 +329,7 @@ export function boot(doc = document) {
     const token = tokenFromSearch(doc.defaultView?.location?.search || "");
     const form = doc.getElementById("unsubscribe-form");
     const list = listFromSearch(doc.defaultView?.location?.search || "");
-    const listName = { pulse: "INNERG PULSE", tech: "INNERG TECH", wisdom: "INNERG WISDOM", ownyourweb: "OWNYOURWEB TIPS" }[list] || "every InnerG list";
+    const listName = { pulse: "INNERG PULSE", labor: "LABOR BRIEF", tech: "INNERG TECH", wisdom: "INNERG WISDOM", ownyourweb: "OWNYOURWEB TIPS" }[list] || "every InnerG list";
     for (const node of doc.querySelectorAll("[data-list-name]")) node.textContent = listName;
     if (!token) {
       paint(doc, { view: "blocked", title: "Link not valid", message: COPY.missingToken, tone: "error" });

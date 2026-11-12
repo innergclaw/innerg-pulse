@@ -196,3 +196,8 @@ html.pulse-splash-on{overflow:hidden}
   .marquee .track{transform:none}
   .pulse-splash{display:none}
 }
+
+/* two lists (PULSE, LABOR BRIEF): one chip per row with a short line under the name */
+.chips{grid-template-columns:1fr}
+.chip span{flex-wrap:wrap;row-gap:6px;padding:12px 12px}
+.chip em{flex-basis:100%;padding-left:17px;font:600 italic 15px/1.25 var(--garamond);letter-spacing:0;text-transform:none;opacity:.85}
