@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="./assets/site.css?v=5" />
   <link rel="stylesheet" href="./assets/labor-a.css?v=a-1" />
   <script defer src="../pulse-a.js?v=a-1"></script>
+  <script type="module" src="../pulse.js?v=pulse-12"></script>
+  <script defer src="./assets/labor-signup.js?v=1"></script>
 </head>
-<body class="pane-cuts">
+<body class="pane-cuts" data-pulse-page="signup">
   <script src="../pulse-splash.js?v=s-1"></script>
   <a class="skip-link" href="#stage">Skip to content</a>
   <svg class="defs" aria-hidden="true" focusable="false">
@@ -29,10 +31,62 @@
       <nav aria-label="Main">
         <a href="./" aria-current="page">Brief</a>
         <a href="./method.html">Method</a>
+        <a class="get-email" href="#signup-panel" data-focus-email>Get it by email</a>
       </nav>
     </div>
   </header>
+  <div class="brief-grid">
+  <aside class="su-card" id="signup-panel" aria-labelledby="panel-title">
+    <span class="su-stamp" aria-hidden="true">FREE</span>
+    <h2 id="panel-title">Get this in your inbox.</h2>
+    <p class="su-intro">Free. INNERG PULSE sends plain-word market news 3 times a day on weekdays, straight to your email.</p>
+    <p class="su-how">Enter your email, pick your lists, confirm with the code we send.</p>
+    <p id="panel-status" class="panel-status" role="status" aria-live="polite"></p>
+
+    <form id="email-form">
+      <label for="email" class="lbl">Your email</label>
+      <div class="row">
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com" />
+        <button type="submit" class="go"><span>Sign me up free</span></button>
+      </div>
+
+      <fieldset class="list-pick">
+        <legend class="lbl">Lists <label class="all"><input type="checkbox" id="list-all" /> <span>Select all</span></label></legend>
+        <div class="su-chips">
+          <label class="su-chip" title="Market news, 3 times a day on weekdays"><input type="checkbox" name="list_pulse" id="list-pulse" checked /><span>PULSE <small>3x daily</small></span></label>
+          <label class="su-chip" title="One daily tech and security digest"><input type="checkbox" name="list_tech" id="list-tech" /><span>TECH <small>daily</small></span></label>
+          <label class="su-chip" title="Short money and mindset cards, twice a week"><input type="checkbox" name="list_wisdom" id="list-wisdom" /><span>WISDOM <small>2x week</small></span></label>
+          <label class="su-chip" title="Simple website tips for business owners, every week"><input type="checkbox" name="list_oyw" id="list-oyw" /><span>OWNYOURWEB <small>weekly</small></span></label>
+        </div>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true"><label for="pulse-hp">Leave this empty</label><input id="pulse-hp" name="pulse_hp" type="text" tabindex="-1" autocomplete="off" /></div>
+    </form>
+
+    <form id="code-form" hidden>
+      <p id="sent-to" class="sent-to"></p>
+      <label for="code" class="lbl">One-time code</label>
+      <div class="row">
+        <input id="code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" minlength="8" maxlength="8" pattern="[0-9]{8}" required placeholder="00000000" />
+        <button type="submit" class="go"><span>Confirm</span></button>
+      </div>
+      <div class="actions"><button id="resend-code" class="quiet" type="button">Send a new code</button><button id="change-email" class="quiet" type="button">Use a different email</button></div>
+    </form>
+
+    <div id="done-panel" hidden>
+      <p class="done-note">Leave any list from the link in any issue.</p>
+      <p class="actions"><a href="https://nasirr.innergintel.study/watchlist/">Open the Market Pulse desk</a></p>
+    </div>
+
+    <p class="privacy">Free. Only the lists you pick. Leave anytime.</p>
+  </aside>
   <main id="stage"></main>
+  </div>
+  <section class="cta-band" aria-labelledby="cta-title">
+    <h2 id="cta-title">Get this in your inbox.</h2>
+    <p>Free. INNERG PULSE sends plain-word market news 3 times a day on weekdays, straight to your email.</p>
+    <p><a class="cta-go" href="#signup-panel" data-focus-email>Sign me up free</a></p>
+  </section>
   <div class="marquee" aria-hidden="true">
     <div class="mtrack">
       <span>▶ INNERG PULSE LABOR BRIEF • WHO IS CUTTING • WHO IS HIRING • EVERY ROW LINKS TO ITS SOURCE • </span><span>▶ INNERG PULSE LABOR BRIEF • WHO IS CUTTING • WHO IS HIRING • EVERY ROW LINKS TO ITS SOURCE • </span>
@@ -42,6 +96,7 @@
     <p class="no">INNERG INTEL • 2026</p>
     <p class="links"><a href="https://pulse.innergintel.study/">Join the free list</a><span class="tag">Every row links to its source.</span></p>
   </footer>
+  <noscript><p class="noscript">JavaScript is required to confirm your email.</p></noscript>
   <script type="module" src="./assets/app.js?v=5"></script>
 </body>
 </html>
