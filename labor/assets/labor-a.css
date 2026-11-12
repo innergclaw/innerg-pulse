@@ -233,3 +233,8 @@ nav a.get-email:hover{background:var(--red);color:var(--cream)}
   .su-card{padding:26px 18px 18px}
   .su-chip small{font-size:13px}
 }
+
+/* two lists: one chip per row with a short line under the name */
+.su-chips{grid-template-columns:1fr}
+.su-chip span{flex-wrap:wrap;row-gap:6px;padding:12px 12px;white-space:normal}
+.su-chip em{flex-basis:100%;padding-left:17px;font:600 italic 15px/1.25 var(--garamond);letter-spacing:0;text-transform:none;opacity:.85}
