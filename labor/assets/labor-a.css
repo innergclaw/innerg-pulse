@@ -151,3 +151,85 @@ html.pulse-splash-on{overflow:hidden}
   .marquee .mtrack{transform:none}
   .pulse-splash{display:none}
 }
+
+/* ---------- sign-up card on the brief (same flow as the home page, via ../pulse.js) ---------- */
+.brief-grid{position:relative;z-index:1;max-width:72rem;margin:0 auto;padding:0 16px 64px;display:grid;grid-template-columns:minmax(0,1fr);align-items:start}
+.brief-grid > main{display:contents}
+#stage > *{grid-column:1 / -1;min-width:0}
+#stage > .hero{grid-row:1;padding-bottom:28px}
+#signup-panel{grid-row:2;margin:4px 8px 24px 0}
+#stage > .stats{grid-row:3;margin-top:8px}
+#signup-panel{scroll-margin-top:96px}
+@media (min-width:960px){
+  .brief-grid{grid-template-columns:minmax(0,1fr) 400px;column-gap:44px}
+  #stage > .hero{grid-column:1;grid-row:1;padding-bottom:56px}
+  #stage > .stats{grid-column:1;grid-row:2;grid-template-columns:1fr 1fr;margin-top:-36px}
+  #signup-panel{grid-column:2;grid-row:1 / span 2;margin:28px 10px 0 0;position:relative}
+}
+.su-card{position:relative;isolation:isolate;padding:30px 24px 22px;transform:rotate(-.6deg)}
+.su-card::before,.su-card::after{content:"";position:absolute;inset:0;z-index:-1;filter:url(#rough)}
+.su-card::after{background:var(--sheet);border:3px solid var(--ink)}
+.su-card::before{background:var(--ink);transform:translate(10px,10px);transition:transform .35s var(--pop)}
+.su-card:focus-within::before{transform:translate(14px,14px)}
+.su-stamp{position:absolute;top:-20px;right:-10px;font:900 20px/1 var(--serif);letter-spacing:4px;color:var(--ink);border:3px solid var(--ink);padding:8px 12px 6px;background:var(--cream);transform:rotate(9deg);filter:url(#rough-sm)}
+.su-stamp::after{content:"";position:absolute;inset:3px;border:1px solid var(--ink)}
+#signup-panel h2{margin:0;font:900 clamp(28px,3vw,36px)/1 var(--serif);font-variation-settings:"opsz" 144,"SOFT" 100;text-transform:uppercase;letter-spacing:-.02em}
+.su-intro{margin:12px 0 0;font:600 18px/1.35 var(--garamond)}
+.su-how{margin:8px 0 0;font:700 12px/1.45 var(--mono);color:var(--mute)}
+#signup-panel .panel-status{margin:8px 0 12px;min-height:1.3em;font:600 17px/1.35 var(--garamond);color:var(--mute)}
+#signup-panel .panel-status:empty{margin-bottom:4px}
+#signup-panel .panel-status[data-tone=error]{color:var(--red);font-weight:700}
+#signup-panel .lbl{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;font:700 11px/1 var(--mono);letter-spacing:4px;text-transform:uppercase;margin:0 0 9px;padding:0}
+#signup-panel .row{display:flex;flex-direction:column;gap:10px}
+#signup-panel input[type=email],#signup-panel input[type=text]{width:100%;font:600 20px/1.2 var(--garamond);padding:14px 16px;border:2px solid var(--ink);background:#fff;color:var(--ink);border-radius:0;transition:box-shadow .25s var(--pop),transform .25s var(--pop)}
+#signup-panel input[type=email]:focus,#signup-panel input[type=text]:focus{outline:none;box-shadow:5px 5px 0 var(--ink);transform:translate(-2px,-2px)}
+#signup-panel #code{font-family:var(--mono);letter-spacing:8px;text-align:center}
+#signup-panel button{font:700 14px/1 var(--mono);letter-spacing:3px;text-transform:uppercase;cursor:pointer;border-radius:0}
+#signup-panel .go,.cta-go{position:relative;overflow:hidden;isolation:isolate;display:block;width:100%;padding:18px;background:var(--ink);color:var(--cream);border:2px solid var(--ink);font:700 15px/1 var(--mono);letter-spacing:4px;text-transform:uppercase;text-align:center;text-decoration:none;transition:transform .2s var(--pop),box-shadow .2s var(--pop)}
+#signup-panel .go span{position:relative;z-index:1}
+#signup-panel .go::after,.cta-go::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--red);transform:translateX(-101%);transition:transform .35s var(--out)}
+#signup-panel .go:hover::after,#signup-panel .go:focus-visible::after,.cta-go:hover::after,.cta-go:focus-visible::after{transform:none}
+#signup-panel .go:hover,.cta-go:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+#signup-panel button:disabled{opacity:.55;cursor:wait}
+#signup-panel fieldset{border:0;margin:16px 0 0;padding:0;min-width:0}
+#signup-panel legend.lbl{float:left;margin-bottom:9px}
+#signup-panel .all{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 var(--mono);letter-spacing:1px;text-transform:none;cursor:pointer;color:var(--mute)}
+#signup-panel .all input{width:15px;height:15px;margin:0;accent-color:var(--ink)}
+.su-chips{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.su-chip{position:relative;cursor:pointer;min-width:0}
+.su-chip input{position:absolute;opacity:0;width:1px;height:1px}
+.su-chip span{display:flex;align-items:baseline;justify-content:flex-start;gap:6px;padding:10px 9px;border:2px solid var(--ink);font:700 11px/1 var(--mono);letter-spacing:1px;background:transparent;transition:background .2s,color .2s,transform .25s var(--pop);white-space:nowrap;overflow:hidden}
+.su-chip small{margin-left:auto;font:600 italic 14px/1 var(--garamond);letter-spacing:0;opacity:.8}
+.su-chip span::before{content:"";flex:none;align-self:center;width:9px;height:9px;border:2px solid currentColor;border-radius:50%}
+.su-chip:hover span{transform:translateY(-2px)}
+.su-chip input:checked+span{background:var(--ink);color:var(--cream)}
+.su-chip input:checked+span::before{background:currentColor}
+.su-chip input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+#signup-panel .sent-to{margin:0 0 12px;font:700 14px/1.3 var(--mono);word-break:break-all}
+#signup-panel .actions{display:flex;gap:18px;flex-wrap:wrap;margin:12px 0 0}
+#signup-panel button.quiet{background:none;color:var(--ink);border:0;padding:6px 0;text-decoration:underline;text-underline-offset:3px;font-size:11px;letter-spacing:2px}
+#signup-panel .done-note{margin:6px 0 0}
+#done-panel a{font:700 12px/1 var(--mono);letter-spacing:2px;text-transform:uppercase}
+#signup-panel .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#signup-panel .privacy{margin:14px 0 0;font:italic 600 15px/1.3 var(--garamond);color:var(--mute);text-align:center}
+.is-fresh{animation:fresh .5s var(--pop)}
+@keyframes fresh{from{transform:translateY(8px) rotate(-.6deg) scale(.98)}to{transform:rotate(-.6deg)}}
+
+/* header button */
+nav a.get-email{background:var(--ink);color:var(--cream);padding:0 12px;border:0}
+nav a.get-email:hover{background:var(--red);color:var(--cream)}
+
+/* bottom repeat CTA */
+.cta-band{position:relative;z-index:1;max-width:40rem;margin:8px auto 40px;padding:0 16px;text-align:center}
+.cta-band h2{margin:0;font:900 clamp(32px,5vw,52px)/.95 var(--serif);font-variation-settings:"opsz" 144,"SOFT" 100;text-transform:uppercase;letter-spacing:-.03em;text-shadow:4px 3px 0 rgba(158,43,37,.8)}
+.cta-band p{margin:14px 0 0}
+.cta-band .cta-go{display:inline-block;width:auto;padding:18px 28px}
+.noscript{text-align:center;padding:12px;font-family:var(--mono)}
+@media (max-width:640px){
+  .top-row{gap:6px 10px}
+  nav{gap:6px;letter-spacing:2px}
+  nav a{height:36px}
+  #stage > .hero{padding-top:16px}
+  .su-card{padding:26px 18px 18px}
+  .su-chip small{font-size:13px}
+}
