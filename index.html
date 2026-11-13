@@ -16,8 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..900,0..100&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="pulse-a.css?v=a-1" />
+  <link rel="stylesheet" href="desk.css?v=d-1" />
   <script type="module" src="pulse.js?v=pulse-13"></script>
   <script defer src="pulse-a.js?v=a-1"></script>
+  <script defer src="desk.js?v=d-1"></script>
 </head>
 <body data-pulse-page="signup">
   <script src="pulse-splash.js?v=s-1"></script>
@@ -39,7 +41,10 @@
         <img src="assets/seal-320.jpg" width="64" height="64" alt="InnerG Intel seal" />
       </a>
       <p class="brand">INNERG <b>PULSE</b></p>
-      <a class="labor-link" href="/labor/">Labor brief</a>
+      <nav class="top-btns" aria-label="Pulse sections">
+        <a class="tbtn tbtn-desk" href="#watchlist">Watchlist</a>
+        <a class="tbtn" href="/labor/">Labor brief</a>
+      </nav>
     </header>
 
     <main id="signup" class="hero">
@@ -108,6 +113,27 @@
       </div>
     </div>
   </div>
+
+  <section class="desk" id="watchlist" aria-labelledby="desk-title">
+    <div class="desk-head">
+      <p class="kicker">The watchlist <i>~</i> live</p>
+      <h2 id="desk-title"><span class="w">Today&rsquo;s</span> <span class="w red">movers.</span></h2>
+      <p class="desk-sub">The biggest moves on the INNERG watchlist today. Updates every hour on weekdays.</p>
+    </div>
+    <div class="desk-bar">
+      <div class="desk-tabs" role="group" aria-label="Show">
+        <button type="button" class="dtab" data-view="all" aria-pressed="true">All</button>
+        <button type="button" class="dtab" data-view="stocks" aria-pressed="false">Stocks</button>
+        <button type="button" class="dtab" data-view="crypto" aria-pressed="false">Crypto</button>
+      </div>
+      <p class="desk-time" id="desk-time" aria-live="polite">Loading the desk&hellip;</p>
+    </div>
+    <ol class="desk-grid" id="desk-grid" aria-label="Biggest moves today"></ol>
+    <div class="desk-ctas">
+      <a class="bigbtn" href="https://nasirr.innergintel.study/watchlist/"><span>Open the market desk <span aria-hidden="true">&rarr;</span></span><small>Every ticker, charts and sectors</small></a>
+      <a class="bigbtn ghost" href="/labor/"><span>Labor brief <span aria-hidden="true">&rarr;</span></span><small>Who is cutting, who is hiring</small></a>
+    </div>
+  </section>
 
   <footer class="foot">
     <p class="no">No. 001 • INNERG INTEL • 2026</p>
