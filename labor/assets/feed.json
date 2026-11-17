@@ -165,154 +165,154 @@
   ],
   "hires": [
     {
+      "company": "Circle K",
+      "sector": null,
+      "open": 10845,
+      "week": 3620,
+      "url": "https://circlek.wd3.myworkdayjobs.com/circlekstorejobs"
+    },
+    {
       "company": "Walmart",
       "sector": "Retail",
-      "open": 20147,
-      "week": 2593,
+      "open": 20519,
+      "week": 2912,
       "url": "https://walmart.wd504.myworkdayjobs.com/walmartexternal"
     },
     {
-      "company": "Circle K",
+      "company": "Aspen Dental",
       "sector": null,
-      "open": 10999,
-      "week": 1791,
-      "url": "https://circlek.wd3.myworkdayjobs.com/circlekstorejobs"
+      "open": 1617,
+      "week": 1355,
+      "url": "https://aspendental.wd1.myworkdayjobs.com/careers_aspen_dental"
     },
     {
       "company": "Jones Lang LaSalle (JLL)",
       "sector": null,
-      "open": 3651,
-      "week": 853,
+      "open": 3620,
+      "week": 948,
       "url": "https://jll.wd1.myworkdayjobs.com/jllcareers"
     },
     {
-      "company": "The Boeing Company",
-      "sector": "Manufacturing",
-      "open": 1592,
-      "week": 804,
-      "url": "https://boeing.wd1.myworkdayjobs.com/external_careers"
+      "company": "Four Seasons",
+      "sector": null,
+      "open": 3750,
+      "week": 895,
+      "url": "https://fourseasons.wd3.myworkdayjobs.com/search"
+    },
+    {
+      "company": "Johnson & Johnson",
+      "sector": null,
+      "open": 1861,
+      "week": 815,
+      "url": "https://jj.wd5.myworkdayjobs.com/jj"
     },
     {
       "company": "Hy-Vee",
       "sector": null,
-      "open": 1541,
+      "open": 1645,
       "week": 775,
       "url": "https://hyvee.wd1.myworkdayjobs.com/hyveecareers"
     },
     {
       "company": "Advance Auto Parts",
       "sector": null,
-      "open": 16310,
-      "week": 753,
+      "open": 2841,
+      "week": 773,
       "url": "https://advanceauto.wd5.myworkdayjobs.com/advanceexternalcareers"
-    },
-    {
-      "company": "Johnson & Johnson",
-      "sector": null,
-      "open": 1819,
-      "week": 721,
-      "url": "https://jj.wd5.myworkdayjobs.com/jj"
     },
     {
       "company": "Fresenius Medical Care",
       "sector": null,
-      "open": 3662,
-      "week": 669,
+      "open": 3167,
+      "week": 642,
       "url": "https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme"
-    },
-    {
-      "company": "Hewlett Packard Enterprise",
-      "sector": "Tech",
-      "open": 5291,
-      "week": 628,
-      "url": "https://hpe.wd5.myworkdayjobs.com/acjobsite"
-    },
-    {
-      "company": "Medtronic",
-      "sector": null,
-      "open": 1918,
-      "week": 584,
-      "url": "https://medtronic.wd1.myworkdayjobs.com/medtroniccareers"
     },
     {
       "company": "Camping World",
       "sector": null,
-      "open": 739,
-      "week": 575,
+      "open": 754,
+      "week": 641,
       "url": "https://campingworld.wd5.myworkdayjobs.com/jobs"
     },
     {
       "company": "ABB",
       "sector": null,
-      "open": 2225,
-      "week": 571,
-      "url": "https://abb.wd3.myworkdayjobs.com/external_career_page"
-    },
-    {
-      "company": "Abbott",
-      "sector": null,
-      "open": 3438,
+      "open": 2035,
       "week": 560,
-      "url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers"
-    },
-    {
-      "company": "Thales",
-      "sector": null,
-      "open": 6195,
-      "week": 531,
-      "url": "https://thales.wd3.myworkdayjobs.com/careers"
-    },
-    {
-      "company": "Citi",
-      "sector": null,
-      "open": 4148,
-      "week": 525,
-      "url": "https://citi.wd5.myworkdayjobs.com/2"
-    },
-    {
-      "company": "TD Bank",
-      "sector": null,
-      "open": 1669,
-      "week": 496,
-      "url": "https://td.wd3.myworkdayjobs.com/td_bank_careers"
-    },
-    {
-      "company": "Labcorp",
-      "sector": null,
-      "open": 1676,
-      "week": 453,
-      "url": "https://labcorp.wd1.myworkdayjobs.com/external"
-    },
-    {
-      "company": "United Parcel Service (UPS)",
-      "sector": null,
-      "open": 2013,
-      "week": 425,
-      "url": "https://hcmportal.wd5.myworkdayjobs.com/search"
-    },
-    {
-      "company": "Sanofi",
-      "sector": null,
-      "open": 1484,
-      "week": 415,
-      "url": "https://sanofi.wd3.myworkdayjobs.com/sanoficareers"
+      "url": "https://abb.wd3.myworkdayjobs.com/external_career_page"
     },
     {
       "company": "Airbus",
       "sector": null,
-      "open": 2978,
-      "week": 404,
+      "open": 2000,
+      "week": 522,
       "url": "https://ag.wd3.myworkdayjobs.com/airbus"
+    },
+    {
+      "company": "Labcorp",
+      "sector": null,
+      "open": 1727,
+      "week": 501,
+      "url": "https://labcorp.wd1.myworkdayjobs.com/external"
+    },
+    {
+      "company": "Genuine Parts Company",
+      "sector": null,
+      "open": 2689,
+      "week": 498,
+      "url": "https://genpt.wd1.myworkdayjobs.com/careers"
+    },
+    {
+      "company": "The Aerospace Corporation",
+      "sector": null,
+      "open": 514,
+      "week": 494,
+      "url": "https://aero.wd5.myworkdayjobs.com/external"
+    },
+    {
+      "company": "Citi",
+      "sector": null,
+      "open": 3541,
+      "week": 469,
+      "url": "https://citi.wd5.myworkdayjobs.com/2"
+    },
+    {
+      "company": "Hitachi",
+      "sector": null,
+      "open": 4155,
+      "week": 445,
+      "url": "https://hitachi.wd1.myworkdayjobs.com/hitachi"
+    },
+    {
+      "company": "The Boeing Company",
+      "sector": "Manufacturing",
+      "open": 889,
+      "week": 444,
+      "url": "https://boeing.wd1.myworkdayjobs.com/external_careers"
+    },
+    {
+      "company": "Sanofi",
+      "sector": null,
+      "open": 1496,
+      "week": 428,
+      "url": "https://sanofi.wd3.myworkdayjobs.com/sanoficareers"
+    },
+    {
+      "company": "Bass Pro Shops",
+      "sector": null,
+      "open": 1743,
+      "week": 416,
+      "url": "https://basspro.wd1.myworkdayjobs.com/careers"
     }
   ],
   "snapshot": {
     "asOf": "17 Nov 2026",
     "laidOff7d": 1410,
-    "newJobs7d": 15126,
+    "newJobs7d": 81683,
     "impactedSector": "Health & Pharma",
     "impactedCount": 735,
-    "topHirer": "Walmart",
-    "topHirerNew": 2593,
+    "topHirer": "Circle K",
+    "topHirerNew": 3620,
     "trackedCuts": 309,
     "boards": 3462
   }
