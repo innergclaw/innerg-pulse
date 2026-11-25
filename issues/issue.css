@@ -8,7 +8,7 @@ body.issue-page .seal{text-decoration:none}
 body.issue-page .seal img{box-shadow:0 0 0 2px var(--ink)}
 
 .issue{max-width:720px;margin:0 auto;padding:48px 28px 88px}
-.issue-kicker{margin:0 0 14px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--sky)}
+.issue-kicker{margin:0 0 14px;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--red)}
 .issue-date{display:block;margin-top:6px;letter-spacing:2px;color:var(--muted);font-weight:400;text-transform:none}
 .issue-cover{margin:0 0 36px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);background:var(--ink)}
 .issue-cover img{display:block;width:100%;height:auto}
@@ -22,7 +22,7 @@ body.issue-page .seal img{box-shadow:0 0 0 2px var(--ink)}
 .issue .signoff{margin:8px 0 0;font-size:18px;line-height:1.7}
 .issue .signoff cite{display:block;margin-top:10px;font-style:normal;font-family:var(--serif)}
 .issue .back{margin:40px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:1px}
-.issue .back a{color:var(--sky);text-decoration:none}
+.issue .back a{color:var(--ink);text-decoration:none}
 .issue .back a:hover{text-decoration:underline}
 
 @media (max-width:760px){
@@ -31,3 +31,22 @@ body.issue-page .seal img{box-shadow:0 0 0 2px var(--ink)}
   .issue-cover{box-shadow:6px 6px 0 var(--ink)}
   .issue h1{margin-bottom:22px}
 }
+
+/* numbered footer, Style A */
+.hz-foot .no{margin-top:14px;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cream)}
+
+/* Market Desk issue pages: brick red headline word, numbered layer list, sign-up band */
+.issue h1 mark{background:none;color:var(--red);padding:0}
+.issue ul.layers{margin:8px 0 28px}
+.issue ul.layers li{padding:14px 0;border-top:1px dashed var(--ink)}
+.issue ul.layers li:last-child{border-bottom:1px dashed var(--ink)}
+.issue ul.layers li::before{content:none}
+.issue ul.layers li b{font-family:var(--mono);font-size:.78em;letter-spacing:2px;text-transform:uppercase;color:var(--red)}
+.issue .band{margin:8px 0 32px;padding:22px 24px 4px;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);background:var(--sheet)}
+.issue .band p{margin:0 0 18px;font-weight:700}
+.issue .band .cta{margin:0 0 18px}
+.issue .more{font-family:var(--mono);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.issue .more a{color:var(--ink);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:3px}
+.issue .more a:hover{color:var(--red)}
+.issue .note{font-family:var(--mono);font-size:13px;letter-spacing:1px;color:var(--muted)}
+@media (max-width:760px){.issue .band{box-shadow:6px 6px 0 var(--ink)}}

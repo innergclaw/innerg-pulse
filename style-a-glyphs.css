@@ -1,0 +1,7 @@
+/* INNERG PULSE ~ Style A glyphs drawn in CSS, never as text characters.
+   .mk is the small play marker in the ticker band. .arr is the arrow on buttons and links.
+   Both inherit the text color and are hidden from assistive tech by the markup (aria-hidden). */
+.mk{display:inline-block;width:.7em;height:.7em;margin-right:.55em;background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%);vertical-align:-.04em}
+.arr{display:inline-block;width:1.1em;height:.75em;margin-left:.4em;background:currentColor;vertical-align:-.02em;
+ -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath d='M0 7.5h19M12.5 1.5l6.5 6-6.5 6' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='square'/%3E%3C/svg%3E") center/contain no-repeat;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 15'%3E%3Cpath d='M0 7.5h19M12.5 1.5l6.5 6-6.5 6' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='square'/%3E%3C/svg%3E") center/contain no-repeat}
