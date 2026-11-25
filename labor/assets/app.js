@@ -204,7 +204,7 @@ function render(data) {
     { text: mono(c.company), class: "mark" },
     c.company,
     [c.sector, c.source === "warn" ? "WARN" : hostOf(c.url), c.country].filter(Boolean).join(" · "),
-    text("span", c.people == null ? "—" : `−${num(c.people)}`, { class: "people loss" }),
+    text("span", c.people == null ? "n/a" : `−${num(c.people)}`, { class: "people loss" }),
     text("span", shortDate(c.date), { class: "when" }),
   ))) : text("p", "No cuts match this filter.", { class: "empty" }));
 
